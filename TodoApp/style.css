@@ -51,7 +51,7 @@ body {
 
 .wrapper {
     position: relative;
-    max-width: 550px;
+    max-width: 600px;
     background: #fff;
     margin: 300px auto;
     padding: 28px 0 30px;
@@ -110,16 +110,39 @@ li {
     cursor: none;
 }
 
+.controls #all.active {
+    background-color: #272e38;
+    color: white;
+    border-radius: 8px;
+    cursor: none;
+    padding: 0 5px 0 5px;
+}
+
+
 .controls #pending {
     transition: all 0.5s ease;
     border-radius: 8px;
     cursor: none;
+}
+.controls #pending.active {
+    background-color: #272e38;
+    color: white;
+    border-radius: 8px;
+    cursor: none;
+    padding: 0 5px 0 5px;
 }
 
 .controls #completed {
     transition: all 0.5s ease;
     border-radius: 8px;
     cursor: none;
+}
+.controls #completed.active {
+    background-color: #272e38;
+    color: white;
+    border-radius: 8px;
+    cursor: none;
+    padding: 0 5px 0 5px;
 }
 
 #all:hover {
