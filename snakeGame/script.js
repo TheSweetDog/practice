@@ -1,4 +1,3 @@
-
 /**
  * Snake Game Components:
  * 
@@ -19,12 +18,11 @@
  * 2. Death conditions: Implement conditions under which the snake will 'die' and the game will end.211111111111
  */
 
-
 // define the variables
 const gameDetails = document.querySelector('.game-details');
 const scoreElement = document.querySelector('.score');
 const highScoreElement = document.querySelector('.high-score');
-const playBoard = document.querySelector(`.play-board`);
+const playBoard = document.querySelector('.play-board');
 const controls = document.querySelectorAll('.controls i');
 
 // define the variables for a game
@@ -40,7 +38,7 @@ const updateFoodLocation = () => {
     const getRandomCoordinate = () => Math.floor(Math.random() * 30 + 1);
     const foodX = getRandomCoordinate();
     const foodY = getRandomCoordinate();
-    const foodHtml = `<div class="food" style="grid-area: ${foodX} / ${foodY};">`;
+    const foodHtml = `<div class="food" style="grid-area: ${foodX} / ${foodY}">`;
     playBoard.innerHTML = foodHtml;
 }
 
@@ -68,4 +66,3 @@ const snakeMovements = e => {
 
 
 updateFoodLocation();
-
