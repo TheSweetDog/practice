@@ -43,5 +43,8 @@ body{
 }
 
 .play-board .food{
-    background-color: #ff002f;
+    background: #ff002f;
+}
+.play-board .snake{
+    background: #d0ff37;
 }
