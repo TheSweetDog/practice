@@ -33,6 +33,7 @@ let snakeX = 15 ,snakeY = 15;
 let foodX, foodY;
 let snakeBody = [];
 let score = 0;
+let moveX = 0, moveY = 0;
 
 // update the location of food
 const updateFoodLocation = () => {
@@ -46,6 +47,24 @@ const updateFoodLocation = () => {
 // get high score
 let highScore = localStorage.getItem("high-score");
 highScoreElement.innerHTML = `High Score: ${highScore}`;
+
+// movements of a snake
+const snakeMovements = e => {
+    if (e.key === "ArrowUp") {
+        moveX = 0;
+        moveY = 1;
+    } else if (e.key === "ArrowRight") {
+        moveX = 1;
+        moveY = 0;
+    } else if (e.key === "ArrowLeft") {
+        moveX = -1;
+        moveY = 0;
+    } else if (e.key === "ArrowDown") {
+        moveX = 0;
+        moveY = -1;
+    };
+};
+
 
 
 updateFoodLocation();
