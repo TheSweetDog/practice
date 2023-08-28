@@ -23,7 +23,7 @@
 // define the variables
 const gameDetails = document.querySelector('.game-details');
 const scoreElement = document.querySelector('.score');
-const highScore = document.querySelector('.high-score');
+const highScoreElement = document.querySelector('.high-score');
 const playBoard = document.querySelector(`.play-board`);
 const controls = document.querySelectorAll('.controls i');
 
@@ -42,6 +42,10 @@ const updateFoodLocation = () => {
     const foodHtml = `<div class="food" style="grid-area: ${foodX} / ${foodY};">`;
     playBoard.innerHTML = foodHtml;
 }
+
+// get high score
+let highScore = localStorage.getItem("high-score");
+highScoreElement.innerHTML = `High Score: ${highScore}`;
 
 
 updateFoodLocation();
