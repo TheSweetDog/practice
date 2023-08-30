@@ -32,13 +32,13 @@ let foodX, foodY;
 let snakeBody = [];
 let score = 0;
 let moveX = 0, moveY = 0;
-let setIntervalId
+let setIntervalId;
 
 const handleGameOver = () => {
     clearInterval(setIntervalId);
     alert("Game Over!");
     location.reload();
-}
+};
 
 // update the location of food
 const updateFoodLocation = () => {
@@ -64,9 +64,8 @@ const snakeMovements = e => {
     } else if (e.key === "ArrowRight" && moveX != -1) {
         moveX = 1;
         moveY = 0;
-    }
-}
-
+    };
+};
 
 //main logic of the game
 const main = () => {
@@ -76,8 +75,10 @@ const main = () => {
     // when a snake eats food
     if (snakeX === foodX && snakeY === foodY) {
         updateFoodLocation();
+
         // add a new part to the snake
         snakeBody.push([foodX,foodY]);
+
         // add scores and update high score
         score++;
         highScore = score >= highScore ? score : highScore;
@@ -101,7 +102,7 @@ const main = () => {
     // snake dies when it hits a wall
     if (snakeX <= 0 || snakeX > 30 || snakeY <= 0 || snakeY > 30) {
         return gameOver = true;
-    }
+    };
 
     // add div for each part of snake body
     for(let i = 0; i < snakeBody.length; i++) {
