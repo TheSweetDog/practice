@@ -36,7 +36,7 @@ let setIntervalId;
 
 const handleGameOver = () => {
     clearInterval(setIntervalId);
-    alert("Game Over!");
+    alert('Game Over!');
     location.reload();
 };
 
@@ -47,7 +47,7 @@ const updateFoodLocation = () => {
 };
 
 // get high score
-let highScore = localStorage.getItem("high-score");
+let highScore = localStorage.getItem('high-score');
 highScoreElement.innerHTML = `High Score: ${highScore}`;
 
 // movements of a snake
@@ -107,7 +107,7 @@ const main = () => {
     // add div for each part of snake body
     for(let i = 0; i < snakeBody.length; i++) {
         html += `<div class="snake" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
-        if (i !== 0 && snakeBody[0][1] === snakeBody[i][1] && snakeBody[0][0] === snakeBody[i][0]){
+        if (i !== 0 && snakeBody[0][1] === snakeBody[i][1] && snakeBody[0][0] === snakeBody[i][0]) {
             gameOver = true;
         };
     };
